@@ -79,7 +79,7 @@ function images() {
 }
 // fonts 
 function fonts() {
-  return gulp.src('src/fonts/*.woff')
+  return gulp.src('src/fonts/*')
     .pipe(gulp.dest('build/assets/fonts/'));
 }
 
@@ -109,7 +109,7 @@ function runServer(done) {
 // watch files
 function watchFiles() {
     gulp.watch(['src/pages/*.html', 'src/blocks/**/*.html'], gulp.series(html, reload));
-    gulp.watch(['src/fonts/*.woff', 'src/fonts/*.woff'], gulp.series(fonts, reload));
+    gulp.watch(['src/fonts/*', 'src/fonts/*'], gulp.series(fonts, reload));
     gulp.watch(['src/styles/**/*.scss', 'src/blocks/**/*.scss'], gulp.series(styles, reload));
     gulp.watch('src/images/**/*', gulp.series(images, reload));
     gulp.watch('src/js/*.js', gulp.series(script, reload));

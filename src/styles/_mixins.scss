@@ -1,0 +1,50 @@
+@mixin media ($size) {
+    @if ($size == sm) {
+        @media only screen and (width >= $screen-sm) {
+          @content;
+        }
+    }
+    @if ($size == md) {
+        @media only screen and (width >= $screen-md) {
+          @content;
+        }
+    }
+    @if ($size == lg) {
+        @media only screen and (width >= $screen-lg) {
+          @content;
+        }
+    }
+}
+
+@mixin container ($br, $padding) {
+  border-radius: $br;
+  padding: $padding;
+  box-sizing: border-box;
+  background-color: var(--bg-grey);
+}
+
+@mixin text ($fw) {
+  font-family: Gilroy;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: $fw;
+  line-height: 20px;
+
+  @include media (md) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@mixin text-min ($fw) {
+  font-family: Gilroy;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: $fw;
+  line-height: 16px;
+
+  @include media (md) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

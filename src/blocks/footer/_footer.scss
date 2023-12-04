@@ -1,0 +1,75 @@
+.footer {
+    @include container (20px, 24px 12px 40px);
+    display: grid;
+    grid-template-areas: "main" "nav" "info";
+    gap: 24px;
+    
+    @include media (sm) {
+        grid-template-areas: "main nav" "info info";
+    }
+    @include media (lg) {
+        grid-template-areas: "main nav info";
+        gap: 84px;
+    }
+
+    &__main{
+        grid-area: main;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    &__main-infoblock{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    &__main-info {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+    &__desc {
+        font-family: Gilroy;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: var(--grey-text);
+    }
+    &__link{
+        font-family: Gilroy;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    &__nav {
+        grid-area: nav;
+        display: flex;
+        gap: 20px;
+    }
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    &__info {
+        grid-area: info;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+    }
+    &__text {
+        margin: 0;
+        padding: 0;
+        font-family: Gilroy;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    &__text a {
+        text-decoration: underline;
+    }
+}
