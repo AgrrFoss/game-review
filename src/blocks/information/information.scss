@@ -1,0 +1,16 @@
+.information {
+    margin-top: 48px;
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+    @include media (md) {
+        flex-direction: row
+    }
+    &__text-block {
+    @include container (12px, 16px 12px 24px);
+    }
+    &__title{
+        @include color-text;
+        @include h2-index (var(--gradient-2));
+    }
+}

@@ -1,0 +1,25 @@
+.button {
+    color: var(--white);
+    border-radius: 5px;
+    border: none;
+    &_gradient {
+        background: var(--gradient-1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 6px 24px;
+        box-shadow: 1px 1px 4px 0px rgba(201, 156, 250, 0.40);
+    }
+    &_sign-in {
+        padding: 6px 24px;
+        background: var(--bg-button);
+    }
+    &_grey {
+        padding: 8px 10px;
+        background: var(--bg-cat);
+    }
+    &_dark-grey {
+        padding: 2px 8px;
+        background-color: var(--bg-grey);
+    }
+}

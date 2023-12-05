@@ -26,15 +26,82 @@
             </ul>
         </nav>
         <div class="header__buttons">
-            <a class="button">Регистрация</a>
-            <a class="button">Войти</a>
+            <a class="button button_gradient">Регистрация</a>
+            <a class="button button_sign-in">Войти</a>
         </div>
 
     </div>
 
 </header>
     <main>
-        <h1>Header</h1>
+        <section class="first container">
+    <div class="first__info">
+        <h1 class="first__title">Обзоры пирожковых</h1>
+        <p>Только проверенная информация о пирожках, начинках и новостях кулинарного мира</p>
+    </div>
+    <div class="first__sliders">
+        <div class="first__slider-main swiper">
+            <div class="swiper-wrapper">
+                <div class="first__slide swiper-slide">
+                    <div class="first__slide-content">
+                        <picture>
+                            <source srcset="assets/images/head@2x.png" media="(min-width:768px)">
+                            <img src="assets/images/head.png" alt="" class="first__slide-img">
+                        </picture>
+                        <p class="first__slide-text">Подпишись на наш телеграм- канал и получай промокоды</p>
+                        <a href="" class="first__slide-link">Подписаться</a>
+                    </div>
+                </div>
+                <div class="first__slide swiper-slide">
+                    <div class="first__slide-content">
+                        <picture>
+                            <source srcset="assets/images/head@2x.png" media="(min-width:768px)">
+                            <img src="assets/images/head.png" alt="" class="first__slide-img">
+                        </picture>
+                        <p class="first__slide-text">Подпишись на лучшие пирожковые и ешь бесплатно</p>
+                        <a href="" class="first__slide-link">Хочу есть</a>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="first__slider-promo swiper">
+            <div class="swiper-wrapper">
+                <div class="first__slide first__slide_promo swiper-slide">
+                    <div class="first__slide-content first__slide-content_promo">
+                        <p class="first__slide-text">Бонус +500%</p>
+                        <a href class="first__slide-link">Перейти</a>
+                    </div>
+                </div>
+                <div class="first__slide first__slide_promo swiper-slide">
+                    <div class="first__slide-content first__slide-content_promo">
+                        <p class="first__slide-text">Бонус +500%</p>
+                        <a href class="first__slide-link">Перейти</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+        
+
+        <section class="information container">
+    <div class="information__text-block">
+        <h2 class="information__title">Для чего нужен сайт с обзорами пирожковых</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio excepturi, sunt in recusandae ipsam enim iure obcaecati quam corporis sint perferendis? Ipsum modi ad quas in similique sit voluptatibus quae.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio excepturi, sunt in recusandae ipsam enim iure obcaecati quam corporis sint perferendis? Ipsum modi ad quas in similique sit voluptatibus quae.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio excepturi, sunt in recusandae ipsam enim iure obcaecati quam corporis sint perferendis? Ipsum modi ad quas in similique sit voluptatibus quae.</p>
+    </div>
+    <div class="information__text-block">
+        <h2 class="information__title">Для чего нужен сайт с обзорами пирожковых</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio excepturi, sunt in recusandae ipsam enim iure obcaecati quam corporis sint perferendis? Ipsum modi ad quas in similique sit voluptatibus quae.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio excepturi, sunt in recusandae ipsam enim iure obcaecati quam corporis sint perferendis? Ipsum modi ad quas in similique sit voluptatibus quae.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio excepturi, sunt in recusandae ipsam enim iure obcaecati quam corporis sint perferendis? Ipsum modi ad quas in similique sit voluptatibus quae.</p>
+    </div>
+</section>
+
     </main>
     <footer class="footer container">
     <div class="footer__main">
@@ -68,5 +135,7 @@
         <p class="footer__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab harum consequatur sed quisquam similique maxime adipisci ea, <a>laudantium placeat</a> sint maiores corporis, neque commodi deleniti perferendis odit dolor fugiat exercitationem.</p>
     </div>
 </footer>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/scripts.min.js"></script>
 </body>
 </html>

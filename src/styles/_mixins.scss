@@ -23,7 +23,7 @@
   background-color: var(--bg-grey);
 }
 
-@mixin text ($fw) {
+@mixin text ($fw: 400) {
   font-family: Gilroy;
   font-size: 14px;
   font-style: normal;
@@ -36,7 +36,7 @@
   }
 }
 
-@mixin text-min ($fw) {
+@mixin text-min ($fw: 400) {
   font-family: Gilroy;
   font-size: 12px;
   font-style: normal;
@@ -46,5 +46,31 @@
   @include media (md) {
     font-size: 14px;
     line-height: 20px;
+  }
+}
+
+@mixin link-white {
+  @include text;
+  transition: .3s ease;
+  &:hover {
+    color: var(--main-color);
+  }
+}
+
+@mixin color-text {
+  background: var(--gradient-2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@mixin h2-index ($color) {
+  &::before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 3px;
+    background: $color;
+
+
   }
 }

@@ -11,7 +11,9 @@
             display: flex;
             justify-content: end;
             gap: 8px;
-            
+        }
+        @include media (lg) {
+            border-bottom: none;
         }
     }
     &__content{
@@ -20,6 +22,19 @@
         grid-template-areas: "logo toggle" "menu menu" "buttons buttons";
         align-items: center;
         justify-content: space-between;
+        justify-items: stretch;
+        @include media(sm) {
+            grid-template-areas: "logo buttons" "menu menu";
+            padding-top: 12px;
+            gap: 12px;
+        }
+        @include media (lg) {
+            grid-template-columns: 2fr 5fr 2fr;
+            grid-template-areas: "logo menu buttons";
+            background-color: var(--bg-grey);
+            padding: 16px 12px;
+            border-radius: 16px;
+        }
     }
     &__logo{
         grid-area: logo;
@@ -31,6 +46,9 @@
         height: 40px;
         justify-self: end;
         grid-area: toggle;
+        @include media (sm) {
+            display: none;
+        }
     }
     &__menu-toggle.is-open ~ .header__menu {
         display: block;
@@ -44,14 +62,29 @@
         border-radius: 20px 20px 0 0;
         grid-area: menu;
         display: none;
+        @include media (sm) {
+            display: block;
+            border-radius: 20px 20px;
+        }
+        @include media (lg) {
+            padding: 0;
+        }
     }
     &__menu-list{
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 12px;
-        
+        @include media (sm) {
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
     }
+    &__menu-list a {
+        @include link-white;
+    }
+
+
     &__buttons{
         background-color: var(--bg-grey);
         padding: 20px;
@@ -61,6 +94,14 @@
         justify-content: space-around;
         gap: 20px;
         display: none;
+        @include media(sm) {
+            display: flex;
+            background-color: transparent;
+            padding: 0;
+        }
+        @include media (lg) {
+            justify-content: end;
+        }
     }
 
 

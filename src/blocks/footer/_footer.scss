@@ -3,6 +3,7 @@
     display: grid;
     grid-template-areas: "main" "nav" "info";
     gap: 24px;
+    margin:60px auto 40px;
     
     @include media (sm) {
         grid-template-areas: "main nav" "info info";
@@ -52,6 +53,9 @@
         display: flex;
         flex-direction: column;
         gap: 12px;
+    }
+    &__menu a {
+        @include link-white;
     }
     &__info {
         grid-area: info;
