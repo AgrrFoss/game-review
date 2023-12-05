@@ -62,3 +62,19 @@ a {
     max-width: 1120px;
     margin: auto;
 }
+
+
+.index__title {
+    display: inline;
+    @include h2-index (var(--white));
+}
+.index__link{
+    margin-left: 12px;
+    @include color-text;
+    @include text-min(500);
+    border-bottom: 1px solid var(--main-color);
+    transition: .3s ease;
+    &:hover {
+        border-bottom: none;
+    }
+}

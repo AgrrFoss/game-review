@@ -1,0 +1,39 @@
+.promocodes {
+    margin-top: 24px;
+    &__block {
+        margin-top: 16px;
+    }
+}
+
+
+
+.promocode {
+    width: 100%;
+    max-width: 220px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    gap: 16px;
+    padding: 12px 8px 16px;
+    background: var(--bg-grey);
+
+    @include media (lg) {
+        max-width: 260px;
+    }
+    &__img {
+        padding:20px;
+    }
+    &__desc {
+        @include text(400);
+    }
+    &__button {
+        background: var(--gradient-1);
+        border: none;
+        text-align: center;
+        width: 100%;
+        color: var(--white);
+        border-radius: 4px;
+        padding: 8px 10px;
+    }
+
+}
