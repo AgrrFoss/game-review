@@ -31,13 +31,33 @@ const promoCodesSlider = new Swiper ('.promocodes__block', {
    spaceBetween: 10,
    breakpoints: {
       500: {
-         slidesPerView: 2,
+         slidesPerView: 1.7,
          centeredSlides: true,
       },
       834: {
          slidesPerView: 3,
       }
    },
-
+   
    loop: true,
-  })
+})
+
+
+
+
+
+const gamesSlider = new Swiper ('.demo-games__games-slider', {
+   slidesPerView: 2.5,
+   spaceBetween: 10,
+   grid: {
+      fill: 'row',
+      rows: 2,
+   },
+   breakpoints: {
+      500: {
+         slidesPerView: 3,
+         spaceBetween: 24,
+         
+      },
+   },
+})

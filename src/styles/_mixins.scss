@@ -29,6 +29,7 @@
   font-style: normal;
   font-weight: $fw;
   line-height: 20px;
+  color: var(--white);
 
   @include media (md) {
     font-size: 16px;

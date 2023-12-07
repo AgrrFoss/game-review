@@ -1,6 +1,6 @@
 .reviews{
     margin-top: 34px;
-    padding: 12px 0;
+    padding: 12px 0 24px;
 
     &__desc{
         @include text(400);
@@ -29,13 +29,49 @@
         width: 250px;
     }
     &__img {
+        position: relative;
         border-radius: 8px 0 0 0;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 120px;
-        background: url('../images/review_bg.svg') no-repeat;
-        background-size: cover;
+        height: 100px;
+        overflow: hidden;
+       // background: url('../images/review_bg.svg') center no-repeat;
+       // background-size: cover;
+        @include media(lg){
+            height: 150px;
+        }
+
+        &::before{
+            position: absolute;
+            content: '';
+            border-radius: 8px 0;
+            display: block;
+            height: 120%;
+            width: 120%;
+            background: url('../images/left-angle.svg')no-repeat;
+
+            @include media (lg) {
+                height: 100%;
+                width: 100%;
+
+            }
+        }
+        &::after{
+            position: absolute;
+            content: '';
+            display: block;
+            height: 130%;
+            width: 130%;
+            right: -10%;
+            bottom: -40%;
+            background: url('../images/right-angle.svg')no-repeat right bottom;
+            
+            @include media (lg) {
+                right: 0;
+                bottom: -20%;
+            }
+        }
     }
     &__info {
         padding: 8px 12px;
