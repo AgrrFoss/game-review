@@ -1,0 +1,72 @@
+.cards{
+    &__filters{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 24px;
+    }
+    &__button {
+        color: var(--white);
+        padding: 6px 16px;
+        background-color: transparent;
+        border-radius: 40px;
+        border: 1px solid var(--white);
+        position: relative;
+        z-index: 2;
+        // box-shadow: 2px 2px 0px 0px #FFF;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            z-index: 1;
+            border-radius: 40px;
+            display: block;
+            border-right: 1px solid var(--white);
+            border-bottom: 1px solid var(--white);
+            width: 100%;
+            height: 100%;
+    
+        }
+    }
+
+    &__nav{
+        margin: 44px auto 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        max-width: 380px;
+    }
+    &__nav-prev{
+        background: var(--gradient-1);
+        border-radius: 2px 10px 2px 10px;
+        padding: 6px 18px;
+        cursor: pointer;
+        @include media (sm) {
+            padding: 6px 25px;
+        }
+    }
+    &__nav-pagination{
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+    }
+    &__nav-bullet{
+        cursor: pointer;
+    }
+    &__nav-bullet_active{
+        color: var(--main-color);
+    }
+    &__nav-next{
+        background: var(--gradient-1-reverse);
+        border-radius: 10px 2px 10px 2px;
+        padding: 6px 18px;
+        cursor: pointer;
+        @include media (sm) {
+            padding: 6px 25px;
+        }
+    }
+}
+
+

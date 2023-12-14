@@ -61,3 +61,38 @@ const gamesSlider = new Swiper ('.demo-games__games-slider', {
       },
    },
 })
+
+const cardsSlider = new Swiper ('.cards__slider', {
+   slidesPerView: 1.2,
+   spaceBetween: 30,
+   grid: {
+      fill: 'row',
+      rows: 2,
+   },
+   breakpoints: {
+      500: {
+         slidesPerView: 2.2,
+         spaceBetween: 24,
+         
+      },
+      800: {
+         slidesPerView: 3,
+         spaceBetween: 24,
+         
+      },
+   },
+   navigation: {
+      nextEl: '.cards__nav-next',
+      prevEl: '.cards__nav-prev',
+   },
+   pagination: {
+      el: ".cards__nav-pagination",
+      bulletClass: 'cards__nav-bullet',
+      bulletActiveClass:'cards__nav-bullet_active',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + "</span>";
+      },
+    },
+   
+})

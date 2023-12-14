@@ -78,3 +78,30 @@ a {
         border-bottom: none;
     }
 }
+.page__title-block{
+    margin: 30px auto 40px;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    @include media (sm) {
+        align-items: center;
+        flex-direction: row;
+        gap: 30px;
+    }
+}
+.page__title {
+    text-align: left;
+    flex-shrink: 0;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    @include media (sm) {
+        font-size: 48px;
+    }
+}
+
+.page__subtitle{
+    flex-shrink: 2;
+    @include text(500);
+}
