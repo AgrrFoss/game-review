@@ -80,6 +80,11 @@ const cardsSlider = new Swiper ('.cards__slider', {
          spaceBetween: 24,
          
       },
+      1440: {
+         slidesPerView: 4,
+         spaceBetween: 24,
+         
+      },
    },
    navigation: {
       nextEl: '.cards__nav-next',
