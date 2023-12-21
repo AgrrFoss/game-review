@@ -1,0 +1,41 @@
+.sidebar{
+    margin-top: 20px;
+    overflow: hidden;
+    @include container (10px, 0);
+    width: 400px;
+    &__title {
+        text-align: center;
+        padding: 10px 24px;
+        display: block;
+        margin: 0 10% 0 0;
+        box-sizing: border-box;
+        border-radius: 0 0 10px 0;
+        background-color: var(--bg-cat);
+        font-family: Gilroy;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    &__content {
+        padding: 24px 0;
+    }
+    &__block{
+        display: flex;
+        padding: 12px 10px;
+        gap: 20px;
+        align-items: center;
+        border-bottom: 1px solid var(--bg-cat);
+    }
+    & img {
+        border-radius: 5px;
+        flex-shrink: 0;
+        height: 72px;
+        width: 140px;
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}

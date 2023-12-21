@@ -59,10 +59,41 @@
     @include text-min(400);
     color: rgba(255, 255, 255, 0.60);
 }
-&__reply{
+    &__reply{
     @include text-min(400);
     @include color-text;
 
 
+   }
+
+
+
+   &__input-block {
+    margin-top: 20px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: var(--bg-cat);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+   }
+   &__input {
+    background: transparent;
+    width: 100%;
+    border: none;
+    padding: 10px 0;
+    color: var(--white);
+    &:focus{
+        border: none;
+        outline: none;
+    }
+    
+   }
+   &__submit{
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: url("../images/icons/send.svg")center no-repeat;
    }
 }

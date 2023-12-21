@@ -34,6 +34,10 @@
 
 </header>
     <main>
+        <section class="container">
+            <h1>Заголовок статьи</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum iste eligendi esse quod debitis ipsam itaque minus error voluptas accusantium, distinctio laboriosam cupiditate sint recusandae mollitia dolores! Exercitationem ratione dolorum facere sapiente id possimus animi sunt eius laborum saepe vitae voluptatum, quibusdam error veniam modi consequatur nemo aut eaque voluptatem pariatur maiores. Eveniet ullam doloribus ipsam odit distinctio, eligendi quis voluptas consectetur. Itaque, natus consectetur corrupti, voluptate iure corporis, ratione quae dolor laudantium a amet? Enim iure eligendi assumenda cupiditate voluptatem maiores sed ullam! Beatae recusandae nam cumque ratione, praesentium repellendus vero accusamus eius quae, quas suscipit ab tenetur odit!</p>
+        </section>
         <section class="container_mt">
             <div class="comments">
     <h2>Комментарии</h2>
@@ -79,12 +83,33 @@
 
         </div>
     </div>
-    <div class="comment__input-block">
-        <input type="text" class="comments__input"><button class="comments__submit"></button>
-    </div>
+    <form class="comment__input-block">
+        <textarea class="comment__input" placeholder="напишите..."></textarea>
+        <button class="comment__submit"></button>
+    </form>
 </div>
         </section>
     </main>
+    <aside class="sidebar">
+    <h3 class="sidebar__title">Новости</h3>
+    <div class="sidebar__content">
+        <div class="sidebar__block">
+            <img src="assets/images/sidebar.jpg" alt="">
+            <div class="sidebar__info">
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, nam?</span>
+                <a class="button">подробнее</a>
+            </div>
+        </div>
+        <div class="sidebar__block">
+            <img src="assets/images/sidebar.jpg" alt="">
+            <div class="sidebar__info">
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, nam?</span>
+                <a class="button">подробнее</a>
+            </div>
+        </div>
+    </div>
+
+</aside>
     <footer class="footer container">
     <div class="footer__main">
         <a href="" class="logo">gamblereview.pro</a>
