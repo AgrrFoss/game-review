@@ -1,0 +1,8 @@
+.breadcrumbs {
+  display: none;
+  @include media(md){
+    display: block;
+    margin: auto;
+    @include text-min(400);
+  }
+}

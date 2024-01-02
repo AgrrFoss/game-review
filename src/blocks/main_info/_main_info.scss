@@ -1,0 +1,58 @@
+.main-info {
+  @include container(10px, 25px 0);
+  display: grid;
+  grid-template-areas: "logo" "nums" "pays" "bonus";
+
+  @include media(md) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "logo logo" "nums nums" "pays bonus";
+  }
+
+
+  &__logo {
+    grid-area: logo;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    & span {
+     @include text(400);
+    }
+  }
+
+
+  &__nums {
+    grid-area: nums;
+    background: var(--bg-cat);
+    border-radius: 4px;
+    padding: 16px 0;
+  }
+    & table {
+      border-spacing: 0px;
+      border-collapse: collapse;
+    }
+    & thead{
+    }
+    & th {
+      border-bottom: 1px solid var(--blue-text);
+      border-right: 1px solid var(--blue-text);
+      padding: 8px 5px;
+      margin: 0;
+      @include text(500);
+    }
+    & th:last-of-type {
+      border-right: none;
+    }
+    & td{
+      text-align: center;
+      margin: 0;
+      padding: 8px 0;
+      border-right: 1px solid var(--blue-text);
+      @include text(400);
+    }
+  & td:last-of-type {
+    border-right: none;
+  }
+
+}
