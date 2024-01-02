@@ -23,36 +23,68 @@
 
 
   &__nums {
+    box-sizing: border-box;
     grid-area: nums;
+    width: 100%;
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
     background: var(--bg-cat);
     border-radius: 4px;
-    padding: 16px 0;
+    padding: 10px 0;
+
+    @include media (sm) {
+      max-width: 740px;
+      display: grid;
+      gap: 0;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 16px 24px;
+    }
   }
     & table {
+      width: 100%;
       border-spacing: 0px;
       border-collapse: collapse;
     }
-    & thead{
+    & tr{
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
     }
     & th {
+      box-sizing: border-box;
+      width: 100%;
       border-bottom: 1px solid var(--blue-text);
       border-right: 1px solid var(--blue-text);
       padding: 8px 5px;
       margin: 0;
+      white-space: nowrap;
       @include text(500);
-    }
-    & th:last-of-type {
-      border-right: none;
+      @include media (sm) {
+        box-sizing: border-box;
+        padding: 8px;
+      }
     }
     & td{
+      box-sizing: border-box;
+      width: 100%;
       text-align: center;
       margin: 0;
-      padding: 8px 0;
+      padding: 8px 5px;
       border-right: 1px solid var(--blue-text);
+      white-space: nowrap;
       @include text(400);
+      @include media (sm) {
+        box-sizing: border-box;
+        padding: 8px;
+      }
     }
-  & td:last-of-type {
-    border-right: none;
-  }
 
+    & table:last-of-type th:last-of-type{
+      border-right: none;
+    }
+    & table:last-of-type td:last-of-type{
+      border-right: none;
+    }
 }
