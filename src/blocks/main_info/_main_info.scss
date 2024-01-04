@@ -1,13 +1,29 @@
 .main-info {
   @include container(10px, 25px 0);
-  display: grid;
-  grid-template-areas: "logo" "nums" "pays" "bonus";
+  margin: 25px auto 0;
+  box-sizing: border-box;
 
-  @include media(md) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "logo logo" "nums nums" "pays bonus";
+  &__content {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    align-content: space-between;
+    justify-content: space-between;
+    grid-template-areas: "logo" "nums" "pays" "bonus";
+
+    @include media(sm) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "logo logo" "nums nums" "pays bonus";
+    }
+    @include media(lg) {
+      grid-template-columns: 7fr 3fr;
+      grid-template-areas: "logo logo" "nums bonus" "pays bonus";
+      column-gap: 24px;
+      max-width: 1040px;
+    }
   }
-
 
   &__logo {
     grid-area: logo;
@@ -23,9 +39,9 @@
 
 
   &__nums {
-    box-sizing: border-box;
     grid-area: nums;
-    width: 100%;
+    box-sizing: border-box;
+    width: calc(100vw - 40px);
     margin: 40px auto 0;
     display: flex;
     flex-direction: column;
@@ -35,16 +51,18 @@
     padding: 10px 0;
 
     @include media (sm) {
-      max-width: 740px;
+      max-width: 850px;
       display: grid;
       gap: 0;
       grid-template-columns: repeat(2, 1fr);
       padding: 16px 24px;
     }
+    @include media (lg) {
+      width: 100%
+    }
   }
-    & table {
-      width: 100%;
-      border-spacing: 0px;
+    & table{
+      border-spacing: 0;
       border-collapse: collapse;
     }
     & tr{
@@ -87,4 +105,94 @@
     & table:last-of-type td:last-of-type{
       border-right: none;
     }
+
+  &__pays {
+    grid-area: pays;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 28px;
+    box-sizing: border-box;
+    padding: 16px 20px;
+
+    @include media (lg) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  &__pays span {
+    white-space: nowrap;
+    text-align: center;
+  }
+  &__pays-block {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 10px;
+    border-right: 1px solid var(--bg-cat);
+
+    &:nth-last-of-type(2n+1) {
+      border: none;
+    }
+    @include media (sm) {
+      &:nth-last-of-type(2) {
+        border-right: 1px solid var(--bg-cat);
+      }
+    }
+    @include media (lg) {
+      &:nth-last-of-type(3) {
+        border-right: 1px solid var(--bg-cat);
+      }
+    }
+  }
+  &__pays-values {
+    display: flex;
+    justify-content: space-around;
+  }
+
+
+  &__bonus {
+    grid-area: bonus;
+    justify-self: end;
+    margin: 20px auto 0;
+    width: 264px;
+    height: 196px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 8px 16px 12px;
+    background: url("../images/bonus-bg.svg");
+
+    @include media (lg) {
+      width: 284px;
+      padding: 0 16px 12px;
+      background: url("../images/bonus-bg-max.svg");
+    }
+  }
+  &__bonus-content {
+    height: 100%;
+    border-bottom: 2px dashed var(--blue-text);
+  }
+  &__bonus-title {
+    font-size: 20px;
+  }
+  &__bonus-flex{
+    display: flex;
+    gap: 20px;
+  }
+  &__bonus-item{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  &__bonus-desc{
+    @include text-min(400);
+    color: rgba(255, 255, 255, 0.60);
+  }
+  &__bonus-value{}
+  &__bonus a {
+    margin-top: 12px;
+    max-width: 170px;
+  }
 }

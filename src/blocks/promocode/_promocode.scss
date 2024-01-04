@@ -9,7 +9,7 @@
 
 .promocode {
     width: 100%;
-    max-width: 220px;
+    margin: auto;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
@@ -17,9 +17,9 @@
     padding: 12px 8px 16px;
     background: var(--bg-grey);
 
-    @include media (lg) {
-        max-width: 260px;
-    }
+    //@include media (lg) {
+    //    max-width: 260px;
+    //}
     &__img {
         padding:20px;
     }

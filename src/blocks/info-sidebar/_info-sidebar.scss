@@ -1,0 +1,29 @@
+.info-sidebar {
+  width: 100%;
+  max-width: 350px;
+  background: var(--bg-grey);
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  display: flex;
+flex-direction: column;
+
+  gap: 24px;
+
+
+
+  &__block {
+    box-sizing: border-box;
+    padding: 10px 12px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--bg-cat);
+  }
+  &__text {
+    @include text(500);
+  }
+  &__text_right{
+    text-align: end;
+  }
+}

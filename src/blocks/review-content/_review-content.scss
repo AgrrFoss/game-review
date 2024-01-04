@@ -1,0 +1,20 @@
+.review-content {
+  display: grid;
+  grid-template-areas: "info" "cont";
+  @include media (lg) {
+    grid-template-columns: 7fr 3fr;
+    grid-template-areas: "cont info";
+    gap: 50px
+  }
+
+
+  &__info {
+    grid-area: info;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__main-content {
+    grid-area: cont;
+  }
+
+}

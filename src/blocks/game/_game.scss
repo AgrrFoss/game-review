@@ -1,0 +1,18 @@
+.game{
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 40px;
+  & img {
+    width: 100%;
+  }
+
+  & h1 {
+    margin-top: 40px;
+  }
+  & h2 {
+    margin-top: 20px;
+  }
+  @include media(sm) {
+    margin-top: 20px;
+  }
+}

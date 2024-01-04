@@ -28,7 +28,7 @@ const promoCodesSlider = new Swiper ('.promocodes__block', {
    },
    speed: 700,
    slidesPerView: 1.2,
-   spaceBetween: 10,
+   spaceBetween: 40,
    breakpoints: {
       500: {
          slidesPerView: 1.7,
@@ -100,4 +100,21 @@ const cardsSlider = new Swiper ('.cards__slider', {
       },
     },
    
+})
+
+const similarSlider = new Swiper ('.similar__slider', {
+   slidesPerView: 1.2,
+   spaceBetween: 20,
+   breakpoints: {
+      500: {
+         slidesPerView: 2.2,
+      },
+      800: {
+         slidesPerView: 3,
+      },
+      1280: {
+         slidesPerView: 4,
+      },
+
+   }
 })
