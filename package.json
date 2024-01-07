@@ -2,10 +2,14 @@
   "name": "game-review",
   "version": "1.0.0",
   "description": "",
+  "homepage": "./",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +17,7 @@
     "autoprefixer": "^10.4.16",
     "browser-sync": "^2.29.3",
     "del": "^7.1.0",
+    "gh-pages": "^6.1.1",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-file-include": "^2.3.0",

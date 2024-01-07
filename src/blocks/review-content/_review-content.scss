@@ -10,11 +10,18 @@
 
   &__info {
     grid-area: info;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
+    justify-content: center;
+    gap: 30px;
     flex-wrap: wrap;
   }
   &__main-content {
     grid-area: cont;
+    margin-top: 40px;
+    @include media(lg) {
+      margin-top: 0;
+    }
   }
 
 }
